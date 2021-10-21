@@ -3,4 +3,4 @@ layout: post
 title: Hello world!
 ---
 
-This is your first blog post--make it your own!
+This is my first blog post--lets start having fun!
