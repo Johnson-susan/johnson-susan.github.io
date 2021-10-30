@@ -1,0 +1,416 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="file:/Users/susanjohnson/Documents/____Northeastern%20fall%202021/ENGL%207370/assignments/7370%20Assignment%204/_working%20drafts_schema%20design_oct%2013/__final%20drafts/johnson_assignment4_schema.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+
+
+<SJlang>
+    <SJlang_header>
+        
+        
+        <fileDesc>
+            <titleStat>
+                <title>The Petition of the Jewes for the Repealing of the Act of Parliament for their banishment out of England.</title>
+                <author>Johanna Cartenright, Widdow, and 
+                    Ebenezer Cartwright her Son
+                </author>
+                <editor>Susan Johnson</editor>
+            </titleStat>
+           
+            
+            <pubStmt>Educational exercise, not to be published</pubStmt>
+            
+            
+            <sourceDesc>WWP</sourceDesc>
+        </fileDesc>
+        
+        
+        <profileDesc>
+            <change when="2021-10-28" who="p:sjohnson.nbc"></change>
+            <doclang xml:lang="en"></doclang>
+            
+            <!-- A few things to note: 
+                1) I have not solved the problem of "long s". I need a global encoding as there are way too many to encode on the phrase-level. 
+                Consequently, this document ignores the issue and uses a modernized reading with "short s". 
+                UPDATE- I was introduced to defaults today in WWP training, Fri oct 29, and I think I might be able to solve the problem in this way. 
+                I will keep this in mind as I learn more.
+                
+                2) Pointing and linking: I included an identifer attribute in some elements, but am not pointing or linking to anything yet. 
+                I have expereince with them in HTML, and they were introduced to us in class, but I had questions. However, my WWP training today 
+                answered my questions so I can practice going forward. 
+                
+                3) Similarily, I just learned today about delimiters, after my encoding for these transcripts. Last session I learned about special unicode characters, 
+                hard and soft hyphens. This is more complicated terriotry to figure out, so for out purpose I used lb to structure the line breaks.
+                
+                4) Further, today I was introduced to the nuanaces of emph, hi, and rend. I will be able to apply this as I learn more going forward.-->
+            
+            
+        </profileDesc>
+    </SJlang_header>
+   
+    
+    <text genre="petition">
+        
+            
+        <front section="titlepage">
+            
+        <div type="title_page">
+            
+            <np/>
+            <mw type="borderSurround"/>
+            <mw type="handwriting"/>
+            
+        </div>    
+            
+        <ab rend="align_center">
+            
+            The Petition of the Jewes 
+        </ab>    
+            
+          <ab rend="align_center">
+              
+              For the Repealing of the Act of 
+              Parliament for their banishment 
+              out of <hi><name type="place">ENGLAND</name></hi>.        
+          </ab>  
+            
+ <ab rend="align_center">
+     Presented to His Excellency and the 
+     generall councell of Officers on 
+     <date when="1648-01-05"/>Fryday Jan. 5. 1648.  
+ </ab>           
+           
+  <ab rend="align_center">
+      
+     <hi> With their favorable acceptance thereof.  </hi>     
+  </ab>         
+            
+<ab rend="align_center">
+    
+    Also a position of divers Comman-
+    Ders, prisoners in the Kings 
+    Bench, for the releasing of all pri-
+    soners for Debt according to 
+    the custome of other 
+    Countries. 
+ 
+</ab>            
+            
+ <ab rend="align_center">
+     
+     <name type="place">London</name>, Printed for <name type="person" subtype="male">george Roberts</name>, <dateline>1648</dateline>          
+ </ab>
+        
+        
+<pb/>    
+            
+            
+  <div type="title_page">
+      
+      <np/>
+      <mw type="stamp_imprint"/>
+      <mw type="paper_damage"/>
+      <pb/>
+  </div>                            
+        </front>
+        
+       
+        
+        
+        <body>
+            
+            <opener>
+  <div type="introduction">
+      
+  <np/>
+      <mw type="pageNum">1</mw>
+      <mw type="figure" subtype="align_center"/>
+      <mw type="paper_damage"/>
+      <mw type="catch">Jewes</mw>
+      <milestone unit="sig" xml:id="A2v"/>
+      
+  </div>   
+                
+ <ab rend="align_center">
+     
+     <salute>To the Right Honourable, 
+     <emph><name type="person" subtype="male">THOMAS Lord FAIRFAX,</name> </emph>
+     
+     (His Excellency)
+     ENGLANES GENERALL, 
+     
+     AND 
+     
+     The Honorable Councel of Warre </salute>
+         
+ </ab>            
+                
+   <ab rend="align_center">
+       
+       Convened for Gods Glory, <emph>Izraells</emph> Freedom, Peace 
+       and Safety,    
+   </ab>             
+           
+<ab rend="align_center">
+    
+    The humble Petition of <hi><name type="person" subtype="female">Johanna Cartenright</name></hi>, Widdow, and 
+    <name type="person" subtype="male">Ebenezer Cartwright</name> her Son, freeborn of <name type="place">England</name>, 
+    and now Inhabitants of the City of 
+    <name type="place">Amsterdam</name>.
+     
+</ab>           
+           
+  <p>
+      <label>Humbly She weth,</label>
+      <rend type="subscrpt"/>That your Petitioners being con-
+      versant in that City, with and 
+      amongst some of <emph>Izraell</emph> race, called     
+  </p>             
+                      
+ <pb/>                    
+ </opener>
+            
+<div type="argument">
+    
+ <np/>   
+    
+ <mw type="pageNum">2</mw>  
+    <mw type="paper_damage"/>
+    <mw type="catch">ners</mw>  
+  
+</div>         
+            
+   <p>
+       
+       Jewes, and growing sensible of their hea-
+       vy out-cryes and clamours against the in-
+       tolerable cruelty of this our <name type="place">English</name> Nati-
+       on, exercised against them by that (and o-
+       ther inhumane exceeding great Massacre 
+       of them, in the Raign of <hi><name type="government_assoc" subtype="male">RICHARD</name> the 
+           second, King of this Land</hi>, and their ba-
+       nishment ever since, with the penalty of 
+       death to be inflicted upon any of their re-
+       turn into this Land, and by that discourse with 
+       them, and serious <sic>pernsall</sic> of the Prophets,
+       both they and we find, that the time of 
+       hereall draweth nigh; whereby they toge-
+       ther with us, shall come to know <name type="religious_assoc" subtype="male">the Ema-
+           nuell, the Lord of life, light, and glory</name>;
+       even as we are now known of him, And that 
+       this nation of <hi><name type="place">ENGLAND</name></hi>, with the Inha-
+       bitants of the <name type="place">Nether-lands</name>, shall be the first 
+       and readiest to transport <emph>IZRAELLS </emph>Sons &#38;
+       Daughters in their Ships to the Land pro-
+       mised to their fore-Fathers,<hi> <name type="religious_assoc" subtype="male">ABRAHAM</name>, <name type="religious_assoc" subtype="male">ISA-
+       AC</name>, and <name type="religious_assoc" subtype="male">JACOB</name></hi>, for an everlasting Inheri-
+       tance.
+            
+   </p>         
+            
+ <p>
+     
+     For the glorious manifestation whereof, 
+     and pyous meanes thereunto, your Petitio-    
+ </p>           
+            
+  <pb/>  
+    
+    
+    
+    
+    
+ <div type="argument">
+     
+  <np/>
+     <mw type="pageNum">3</mw>
+     <mw type="paper_damage"/>
+     <mw type="catch">To</mw>
+        
+ </div>   
+    
+ <p>
+     ners humbly pray that the inhumane cruel 
+     Statute of banishment made against them,
+     may be repealed, and they under the Christi-
+     an banner of charity, and brotherly love, 
+     may again be received and permitted to 
+     trade and well amongst you in this Land,
+     as they now do in the <name type="place">Nether-lands</name>.
+     
+ </p>
+ 
+ 
+ <p>
+     By which act of mercy, your Petitioners 
+     are assured of the wrath of God, will be 
+     much appeased towards you, for their in-
+     nocent blood shed, and they thereby dayly 
+     enlightened in the saving knowledge of 
+     him, for whom they look dayly and expect 
+     as their King of eternal glory, and both 
+     their and our Lord God of salvation (<name type="religious_assoc" subtype="male">Christ 
+     Jesus</name>.) For the glorious accomplishing 
+     whereof, your Petitioners do, and shall e-
+     ver address themselves to the true Peace,
+     and pray, &#38;c. 
+     
+ </p>
+ 
+ 
+ <ab>
+     This Petition was presented to the generall Councell 
+     of the Officers of the Army, under the Command of 
+     his Excellency, <name type="person" subtype="male">Thomas Lord Fairfax</name>, at <name type="place">White-
+     Hall</name> on <date when="01-05"/>Jan. 5. And favourably received with a pro-
+     mise to take it into speedy consideration, when the 
+     present more publike affairs are dispatched.
+     
+ </ab>
+ 
+<pb/> 
+ 
+ 
+ 
+ <div type="argument">
+     
+ <np/>
+ <mw type="pageNum">4</mw> 
+     <mw type="paper_damage"/>
+     <mw type="catch">im</mw>    
+ </div>
+ 
+<ab rend="align_center">
+    <salute><hi>To His Excellency, <name type="person" subtype="male">Thomas Lord 
+    Fairfax</name>, and his Generall 
+    Councel of Officers. </hi></salute>   
+</ab> 
+ 
+<ab rend="align_center">
+    <hi><head>The most humble Petition of divers Commanders, Prisoners 
+    in the Kings Bench, whose names are hereunto subscribed 
+    in the behalfe of themselves, and all other their en-
+    slaved Brethren, imprisoned for Debt.</head></hi>
+    
+</ab> 
+ 
+ <p>
+     <label>Shewth</label>, 
+    <hi> <rend type="subscrpt"/>That your Petitioners with all se-
+     riousnesse revolving the admira-
+     ble mercy of God, vouchsafed to this 
+     Nation in preserving and carrying on 
+     your Excellency &#38; Pyous Army through 
+     the many dangers and difficulties 
+     (and according to the desires of your Pe-
+     titioners in all good men) in Crowning 
+     you with Victory, and putting this long 
+     wish for opportunity into your hands, of 
+     procuring a speedy administration of jus-
+     tice for the impartiall punishment of all 
+     offenders, to the relief and comfort of the 
+     offressed; your Petitioners are hereby</hi>
+     
+ </p>
+ 
+ <pb/>
+            
+            
+ <div type="argument">
+     
+ <np/>
+     <mw type="pageNum">5</mw>
+     <mw type="paper_damage"/>
+     <mw type="catch">where</mw>
+  
+ </div>           
+            
+  <p>
+     <hi> imboldned and by your Proposalls and
+      late Declarations encouraged to make 
+      their humble addresses to your Excellen-
+      cy, and the Generall councell of the Ar-
+      my.</hi>
+      
+  </p>          
+            
+ <p>
+     <hi>That your Petitioners with all hum-
+     blenesse and earnestnesse beseech your 
+     Excellency, who is the patern and Pa-
+     tron of Souldiers, first to confer their 
+     sad condition (being imprisoned contrary 
+     to the Law of God, the fundamentall 
+     Laws of this <name type="government_assoc">Kingdone</name>, and the pract-
+     ice of all States) and pursue their Petiti-
+     on hereunto annexed, containing their 
+     grievances and desires, as soone as 
+     your weighty affaires will permit to take 
+     such order (either by presenting the same, 
+     or otherwise for your Petitioners just relief 
+     and liberty, without prison Fees, as to your 
+     Excellency and the Generall Councells 
+     grave wisdome shall seeme expedient, </hi>
+     
+ </p>           
+            
+<pb/>
+
+
+
+<div type="conclusion">
+    
+  <np/>
+    <mw type="pageNum">6</mw> 
+    <mw type="stamp_imprint"/>
+    <mw type="paper_damage"/>
+</div>
+ 
+ <p>
+     
+    <hi> whereby they may be enabled to attend 
+     your Excellencies Command in the Ar-
+     my or elsewhere.</hi>
+     
+ </p>
+ 
+ <p>
+     And further your Petitioners humbly 
+     Pray, that you would please with all con-
+     Venience, mature some course for the re-
+     leasing of all Prisoners for debt, especially 
+     the well affected, and in the meane times 
+     according to your practice of other 
+     Countries cause their Creditors to main-
+     taine them according to their qualities, 
+     that noe more perish through want, as 
+     very many have done already, whole in-
+     nocent bloud cryes for vengeance to the 
+     Almighty, and doubtlesse is not the least
+     cause of our present calamities, and of 
+     Gods judgments upon us. 
+     
+ </p>
+ 
+ 
+ 
+ <p>
+    <signature>And as in duty bound, your Petitioners shall pray &#38;c.</signature>
+    </p>
+     
+     
+ <ab rend="align_center">
+     
+    <signature> FINIS</signature>
+ </ab>    
+ 
+ 
+ 
+        </body>
+        
+        
+        
+        
+        
+        
+        
+    </text>
+</SJlang>

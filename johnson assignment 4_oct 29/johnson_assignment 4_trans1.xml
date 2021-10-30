@@ -1,0 +1,496 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="file:/Users/susanjohnson/Documents/____Northeastern%20fall%202021/ENGL%207370/assignments/7370%20Assignment%204/_working%20drafts_schema%20design_oct%2013/__final%20drafts/johnson_assignment4_schema.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<SJlang>
+    
+    <SJlang_header>
+        
+        <fileDesc>
+            <titleStat>
+                <title>A TRUE COPIE OF THE PETITION OF THE GENTLEWOMEN, and Tradesmens-wives, in and about the City of LONDON.</title>
+                <author>Women of London</author>
+                <editor>Susan Johnson</editor>
+            </titleStat>
+            
+            
+            <pubStmt>Educational exercise, not to be published</pubStmt>
+            <sourceDesc>WWP</sourceDesc>
+        </fileDesc>
+        
+        
+        <profileDesc>
+            <change when="2021-10-26" who="p:sjohnson.nbc"></change>
+            <doclang xml:lang="en"></doclang>
+            
+          <!--
+            <hand></hand>
+            
+            <note></note>
+            
+            <notesstmt></notesstmt>-->
+            
+            
+            <!-- A few things to note: 
+                1) I have not solved the problem of "long s". I need a global encoding as there are way too many to encode on the phrase-level. 
+                Consequently, this document ignores the issue and uses a modernized reading with "short s". 
+                UPDATE- I was introduced to defaults today in WWP training, Fri oct 29, and I think I might be able to solve the problem in this way. 
+                I will keep this in mind as I learn more.
+                
+               2) Pointing and linking: I included an identifer attribute in some elements, but am not pointing or linking to anything yet. 
+                I have expereince with them in HTML, and they were introduced to us in class, but I had questions. However, my WWP training today 
+                answered my questions so I can practice going forward. 
+                
+                3) Similarily, I just learned today about delimiters, after my encoding for these transcripts. Last session I learned about special unicode characters, 
+                hard and soft hyphens. This is more complicated terriotry to figure out, so for out purpose I used lb to structure the line breaks.
+                
+                4) Further, today I was introduced to the nuanaces of emph, hi, and rend. I will be able to apply this as I learn more going forward.
+            -->
+            
+        </profileDesc>
+    </SJlang_header>
+    
+    
+    <text genre="petition">
+      
+     
+      
+      
+      <front section="titlepage">
+          
+        <div type="title_page">
+            <np/>
+            <mw type="borderSurround"/>
+          
+        </div>  
+          
+          <ab rend="align_center">
+              <lb/>             A TRUE COPIE 
+              <lb/>             OF THE 
+              <lb/>             PETITION 
+              <lb/>             OF THE 
+              <lb/>              GENTLEWOMEN, 
+              <lb/>              and Tradesmens-wives, in 
+              <lb/>              and about the City of 
+              <lb/>              <name type="place">LONDON</name>.        
+          </ab>
+          
+    <ab rend="align_center">
+        Delivered, 
+        <lb/>       To the Honourable, the KNIGHTS, 
+        <lb/>        Citizens, and Burgesses, of the <name type="place">House of       Commons in Parliament</name>, the <date when="1641-02-04"/>4th of February, 1641.
+    </ab>      
+          
+     <ab rend="align_center">
+         <lb/>        Together,
+         <lb/>        with their severall Reasons why their sex ought thus 
+         <lb/>        to Petition, as well as the men; and the manner 
+         <lb/>        how both their Petition and Reasons was delivered.
+     </ab>     
+          
+          
+    <ab rend="align_center">
+        <lb/>       Likewise the answer which <name type="government_assoc">the Honorable Assembly</name>
+        <lb/>       sent to them by <name type="government_assoc" subtype="male"><abbrev/>Mr Pym</name>, as they stood at the House door. 
+    </ab>      
+          
+          
+       <ab rend="align_center">
+           <lb/>         <name type="place">London</name>,
+           <lb/>         Printed by <name type="org">R.O. &#38; G.D.</name> for <name type="person" subtype="male">John Bull</name>, <dateline>1642</dateline>
+       </ab>   
+          
+          <pb/>
+      </front>      
+      
+     
+      <body>
+    <opener> 
+          <div type="introduction">
+              <np/>
+              <mw type="pageNum">1</mw>
+              <mw type="figure" subtype="align_center"/>
+              <mw type="catch">christians</mw>           
+          </div>   
+          
+          
+  <ab rend="align_center">
+      
+      <lb/>      To the 
+      <lb/>      <emph>HONOURABLE</emph> 
+      <lb/>      KNIGHTS, CITIZENS 
+      <lb/>     and BURGESSES, of <name type="government_assoc">the House 
+      of Commons</name> assembled in 
+      <lb/>      <name type="government_assoc">Parliament</name>.
+  </ab>
+  
+  <ab>
+      <lb/>      The most humble Petition of the 
+      <lb/>     Gentlewomen, Tradesmens wives, 
+      <lb/>     and many others of the Female sex, all In-
+      <lb/>     habitants of the <emph><name type="place">Citie of LONDON</name></emph>, and 
+      <lb/>     the Suburbs thereof.
+         
+  </ab>
+  
+  <p>
+      <lb/>    <head><emph>With Lowest Submission Showing</emph>,</head>
+      <lb/>    <rend type="subscrpt"/>THAT we also with all thankfull hu-
+      <lb/>     mility acknowledging the unwearie
+      <lb/>    paines, care and gr..at charge, besides
+      <lb/>    hazard of health and life, which you
+      <lb/>    the noble worthies of his honoura-
+      <lb/>    ble and renowned Assembly have un-
+      <lb/>    dergone, for the safety both of <name type="religious_assoc">Church</name>
+      <lb/>    and <name type="government_assoc">Commonwealth</name>, for a long time already past; for
+      <lb/>    which not only we your humble Petitioners, and all
+      <lb/>    well affected in this kingdom, but also all other good 
+      <lb/>    Christians.  
+  </p>
+  <pb/>
+                   
+    </opener>       
+          
+          
+     <div type="argument">
+         <np/>
+         <mw type="pageNum">2</mw>
+         <mw type="catch">us</mw>
+         <milestone unit="sig" xml:id="A2r"/>  
+     </div>     
+          <p>
+              
+ <lb/>             Christians are bound now and at all times to acknow-
+              <lb/>             ledge; yet notwithstanding that worthy deeds 
+              <lb/>             have been done by you, great danger and fear do still 
+              <lb/>              attend us, &#38; will, as long as <name type="government_assoc" subtype="male">Popish Lords</name> and superstitious 
+              <lb/>             <name type="religious_assoc">Bishops</name> are suffered to have their voice in <name type="government_assoc">the House of 
+                             Peers</name>, and that accursed and abhominable Idole of the 
+              <lb/>              Masse suffered in the <name type="government_assoc">Kingdome</name>, and that Arch-ene-
+              <lb/>             my of our prosperity and Reformation ly eth in the 
+              Tower, yet not receiving his deserved punishment.
+             
+          </p>
+           <p>
+               
+       <lb/>        All these under correction, gives us great cause to 
+               <lb/>          suspect, that <emph><name type="religious_assoc" subtype="male">GOD</name></emph> is angry with us, and to be the chiefe 
+               <lb/>             causes why your pious indeavours for a further Refor-
+               <lb/>            mation proceedeth not with that success as you desire,
+               and is most earnestly prayed for all that with well
+               <lb/>              to true Religion, and the flourishing estate both of <name type="government_assoc" subtype="male">King </name>
+               <lb/>              and <name type="government_assoc">Kingdome</name>, the insolencies of the Papists and their 
+               <lb/>              abbettors, raiseth a just feare and suspition of sowing 
+               <lb/>             sedition, and breaking out into bloody persecution in 
+               <lb/>               this <name type="government_assoc">Kingdome</name>, as they have done in <emph><name type="place">IRELAND</name></emph>, the 
+               <lb/>              thoughts of which sad and barbarous events, maketh 
+               <lb/>              our tender hearts to melt within us, forcing us humbly 
+               <lb/>              to Petition to this honourable Assembly, to make safe 
+               <lb/>               provision for your selves and us, before it be too late.
+               
+           </p>   
+              
+              
+              <p>
+                  <lb/>                 And whereas we, whose hearts have joined cheeref-
+                  <lb/>                 ully with all those Petitions which have been exhibit-
+                  <lb/>                 ted unto you in the behalf of the purity of Religion, 
+                  <lb/>                 and the liberty of our Husbands persons and estates, re-
+                  <lb/>                 counting our selves to have an interest in the common 
+                  <lb/>                 priviledges with them, doe with the same confidence 
+                  <lb/>                 assure our selves to finde the same gracious acceptance 
+                  <lb/>                 with you, for easing of those grievances, which in re-
+                  <lb/>                 gard of our fraile conditions, do more nearly concerne
+                  
+                
+              </p>
+              
+              <pb/>
+          
+          <div type="argument">
+              <np/>
+              <mw type="pageNum">2</mw>
+              <mw type="catch">thousands</mw>
+          </div>
+              
+    <p>
+        <lb/>       us, and do deeply terrifie our soules: our Domesiticall 
+        <lb/>       dangers with which this <name type="government_assoc">Kingdome</name> is so much distra-
+        <lb/>       cted, especially growing on us from those treacherous 
+        <lb/>        and wicked attempts already are such, as we finde our 
+        <lb/>        selves to have as deepe a share as any other.
+    </p>          
+        
+   <p>
+       <lb/>      We cannot but tremble at the very thoughts of the 
+       <lb/>       horrid and hideous facts which modesty forbids us now 
+       <lb/>       to name, occasioned by the bloody Warres in <emph><name type="place">germany</name></emph>,
+       <lb/>      <name type="government_assoc" subtype="male"> his majesties</name> late Northern Army, how often did it 
+       <lb/>      affright our hearts, whilst their violence began to break 
+       <lb/>       out so furiously upon the persons of those, whose 
+       <lb/>       Husbands or Parents were not able to rescue: wee wish 
+       <lb/>       we had no cause to speak of those insolencies, and 
+       <lb/>       savage usage and heard unheard of rapes, exercised upon our 
+       <lb/>      sex in <emph><name type="place">Ireland</name></emph> and have we not just cause to fear they 
+       <lb/>       will prove the forerunners of our ruin, except Almigh-
+       <lb/>       ty <emph><name type="religious_assoc" subtype="male">GOD</name></emph> by the wisdom and care of this Parliament be 
+       <lb/>       pleased to succur us, our Husbands and Children, which
+       <lb/>       are as deere and tender onto us, as the lives and blood
+       <lb/>     of our hearts, to see the murthered and mangled and 
+       <lb/>      cut in pieces before our eyes, to see our Children dash
+       <lb/>      ed against the stones, and the Mothers milke mingled
+       <lb/>      with the Infants blood, running down the streets; to see
+       <lb/>      our Houses on flaming fire over our heads: <said>oh how 
+           <lb/>       dreadfull would this be!</said> we have thought it misery enough
+       <lb/>      (though nothing to that we have just cause to feare)
+       <lb/>      but few yeares since for those of our Sex, by unjust 
+       <lb/>     divisions from their bosome comfores, to be rendred in 
+       <lb/>      a manner Widdowes and the children Fatherless,
+       <lb/>      Husbands were Imprisoned from the Society of their 
+       <lb/>      Wives, even against the Lawes of <emph><name type="religious_assoc" subtype="male">GOD</name></emph> and Nature 
+       <lb/>      and little Infants suffered in their Fathers banishments:     
+   </p>       
+ <pb/>
+          
+          
+          
+          
+ <div type="argument">
+   <np/>
+     <mw type="pageNum">3</mw>
+     <mw type="catch">pleased</mw>
+     <milestone unit="sig" xml:id="A3r"/>
+ </div>        
+          
+          
+   <p>
+       
+       <lb/>       thousands of our deerest friends have bin compelled 
+       <lb/>       to fly from Episcopall persecutions into desert places 
+       <lb/>      amongst wilde Beasts, there finding more favor then 
+       <lb/>       in their native soyle, and in the midst of all their sor-
+       <lb/>      rowes, such halth the pitty of the Prelats been, that 
+       <lb/>      our cries could never enter their eares or hearts,
+       <lb/>      nor yet through multitudes of obstructions could ne-
+       <lb/>      ver have accesse or come nigh to those Royall mercies 
+       <lb/>      of our most gracious <name type="government_assoc" subtype="male">Soveraigne</name>, which we confident
+       <lb/>      ly hope, would have relieved us: but after all these 
+       <lb/>      pressures ended, we humbly signifie, that our present 
+       <lb/>      feares are, that unlesse the blood-thirsty faction of the 
+       <lb/>      <name type="religious_assoc">Papists</name> and <name type="religious_assoc" subtype="male">Prelates</name> be hindered in their designes, our 
+       <lb/>      selves here in <emph><name type="place">England</name></emph> as well as they in <emph><name type="place">Ireland</name></emph>, shall be 
+       <lb/>     exposed till that misery which is more intollerable then 
+       <lb/>     that which is already past, as namely to the rage not of 
+       <lb/>      men alone, but of Divells incarnate, (as we may so say) 
+       <lb/>      besides the thraldome of our soules and consciences in 
+       <lb/>      matters concerning <emph><name type="religious_assoc" subtype="male">GOD</name></emph>, which all things are most 
+       <lb/>      deare unto us.
+     
+   </p>       
+          
+ <p>
+     <lb/>    Now the remembrance of all these fearfull acci-
+     <lb/>   dents aforementioned, do strongly move us from the 
+     <lb/>   example of the woman of <emph><name type="place">Tekoa</name></emph> to fall submissively at 
+     <lb/>   the feete of <name type="government_assoc" subtype="male">His Majestie</name>, our dread <name type="government_assoc" subtype="male">Soveraigne</name>,  and cry 
+     <lb/>    <said>Helpe o King,  helpe o yee the noble Worthies now sit-
+         <lb/>    ting in <name type="government_assoc">Parliament</name></said>:  And we humbly beseech you, that 
+     <lb/>    you will be a meanes to <name type="government_assoc" subtype="male">his Majestie</name> and <name type="government_assoc">the House of 
+        Peeres</name>, that they will be pleased to take our heart
+     <lb/>    breaking grievances into timely consideration, and to 
+     <lb/>   adde strength &#38; incouragement to your noble endea-
+     <lb/> vors and further that you would move <name type="government_assoc" subtype="male">his Majestie</name>
+     <lb/>  with our humble requests, and that he would be graciously
+   
+ </p>         
+          
+  <pb/>        
+       
+       
+  <div type="argument">
+   <np/>
+      <mw type="pageNum">5</mw>
+      <mw type="catch">The</mw>
+      <mw type="broken_line" subtype="align_center"/>          
+  </div>     
+       
+       
+   <p>
+       
+       <lb/>     pleased according to the example of the good <emph><name type="religious_assoc" subtype="male">King 
+       Asa</name></emph>, to purge both <name type="government_assoc">the Court</name> and <name type="government_assoc">Kingdome </name>of 
+       <lb/>     the greatest Idolarous Service of the Masse, which is 
+       <lb/>     tollerated in the <name type="government_assoc" subtype="female">Queene's Court</name>, this sinne (as we con-
+       <lb/>      cieve) is able to draw downe a greater curse upon the 
+       <lb/>     whole <name type="government_assoc">Kingdome</name>, then all your noble and pious indea-
+       <lb/>      vours can prevent, which was the cause that the good 
+       <lb/>      and pious <emph><name type="religious_assoc" subtype="male">King Asa</name></emph> would not suffer Idolatry in his 
+       <lb/>      own Mother, whose example if it shall please <name type="government_assoc" subtype="male">his Ma-
+            jesties</name> graciovs goodnesse to follow, and putting downe 
+       <lb/>      Popery and Idolatry both in great and small, in <name type="government_assoc">Court</name> 
+       <lb/>  And in the <name type="government_assoc">Kingdome</name> throughout, to subdue the Papi-
+       <lb/>    sts and their abetters, and by taking away the power 
+       <lb/>    of the <name type="religious_assoc" subtype="male">Prelats</name>, whose government by long and wofull 
+       <lb/>     experience we have found to be against the liberty of 
+       <lb/>     our conscience and the freedome of the Gospell, and 
+       <lb/>     the sincere profession and practice thereof, then shall 
+       <lb/>      our fears be removed, and we may expect that GOD
+       <lb/>      will power downe his blessings in abundance both <supplied>up-
+       on</supplied> <name type="government_assoc" subtype="male">his Majesty</name>, and upon <name type="government_assoc">this Honourable Assembly</name>,
+       <lb/>     and upon the whole Land.
+   </p>
+          
+       
+     <ab rend="align_right">  <head><emph>For which your new petitioners shall pray affectionately</emph></head></ab>
+         
+          
+    <pb/>
+          
+  
+  
+  <div type="argument">
+   <np/>   
+      
+ <mw type="pageNum">6</mw> 
+ <mw type="catch">life</mw>      
+  </div>  
+    
+    
+  <ab rend="align_center">
+      
+      
+      <label>The Reasons Follow</label>
+  </ab>
+    
+    
+   <p>
+       
+       <lb/>     <rend type="subscrpt"/>IT may be thought strange and unbeseeming our sex 
+       <lb/>      to shew ourselves by way of Petition to <name type="government_assoc">this Honou-
+          rable Assembly:</name> but the matter being rightfully conside-
+       <lb/>      red, of the right and interest we have in the common
+       <lb/>     and publique cause of <name type="religious_assoc">the Church</name>, it will, as we con-
+       <lb/>  ceive (under correction) be found a duty commanded and 
+       <lb/>    required.      
+   </p> 
+    
+  <p>
+      
+  <list>
+      
+      <item>
+          <lb/>       <label>First</label> because <name type="religious_assoc" subtype="male">Christ</name> hath purchased us at as deare a 
+          <lb/>        rate as he hath done Men, and therfore requireth the 
+          <lb/>       like obedience for the same mercy as of men.         
+    </item>  
+      
+     <item>
+         <lb/>       <label>Secondly,</label> because in the free enjoying of <name type="religious_assoc" subtype="male">Christ</name> in his 
+         <lb/>        own Laws, and a flourishing estate of <name type="religious_assoc">the Church</name> and 
+         <lb/>        <name type="government_assoc">Common-wealth</name>, consisteth the happinesse of Women 
+         <lb/>        as well as Men.  
+     </item>
+     
+   <item>
+       <lb/>      Calamities that accompany both <name type="religious_assoc">Church</name> and <name type="government_assoc">Com-
+            mon-Wealth</name>, when oppression is exercised over <name type="religious_assoc">the 
+       Church</name> or <name type="government_assoc">Kingdome</name> wherein they live; and an unli-
+       <lb/> mited power have been given to <name type="religious_assoc">Prelats</name> to exercise 
+       <lb/>  authority over the Consciousness of Women, aswell as 
+       <lb/>   Men, witness <name type="place">Newgate</name>, <name type="place">Smithfield</name>, and other places of 
+       <lb/>   Persecution, wherein Women aswell as Men have felt 
+       <lb/>    the smart of their fury.
+   </item>    
+  </list>     
+  </p>  
+    
+  <p>
+      
+      <lb/>   Neither are we left without example in Scripture,
+      <lb/>   for when the state of <name type="religious_assoc">the Church</name>, and the time of <emph><name type="religious_assoc" subtype="male">King 
+     Ahasuerus </name></emph>was by the bloody enemies thereof sought to 
+      <lb/>    be utterly destroyed, we find <supplied>that</supplied> <emph><name type="religious_assoc" subtype="female">Ester the Queen</name></emph> and 
+      <lb/>     her Mayds fasted and prayed, and that <emph><name type="religious_assoc" subtype="female">Ester</name></emph> petitioned 
+      <lb/>     to <name type="government_assoc">the King</name> and the behalfe of <name type="religious_assoc"> the Church</name>: and though 
+      <lb/>     she enterprised this duty with the hazard of her own, 
+  </p>
+
+<pb/>
+          
+  <div type="conclusion">
+ <np/>
+      <mw type="pageNum">6</mw>
+  </div>        
+          
+<p>
+    <lb/>   life, being contrary to the Law to appeare before the 
+    <lb/>   King before she were sent for, yet her love to the 
+    <lb/>    <name type="religious_assoc">Church</name> carryed her thorow all difficulties, to the per-
+    <lb/>    formance of that duty.
+</p>
+
+<p>
+    
+    <lb/>   On which grounds we are imboldned to present our 
+    <lb/>   humble Petition unto <name type="government_assoc">this Honourable Assembly</name>, not 
+    <lb/>   weighing the reproaches which may and are by many 
+    <lb/>    cast upon us, who (not well weighing the premises) 
+    <lb/>   scoffe and deride our good intent. We doe it not out 
+    <lb/>   of any selfe conceit, or pride of heart, as seeking to 
+    <lb/>   equal ourselves with Men, either in Authority or wis-
+    <lb/>    dome: but according to our places to discharge that 
+    <lb/>    duty we owe to God, and the cause of <name type="religious_assoc">the Church</name>, as 
+    <lb/>    farre as lyeth in us, following therein the example of 
+    <lb/>   the Men which have gone in this duty before us. 
+</p>
+
+<ab rend="align_center">
+    
+    <lb/>  A relation of the manner how it was delivered, with 
+    <lb/>   their Answer, sent by <name type="government_assoc" subtype="male">Mr. Pym.</name>
+  
+</ab>
+
+<p>
+    
+    <lb/>    <head><emph><rend type="subscrpt"/>This petition with their Reasons, was delivered the <date when="1641-02-04"/>4th of Feb. 
+        1641. by <name type="person" subtype="female"><abbrev/>Mris. Anne Stagg</name>, a Gentlewoman and BrewersWife
+        <lb/>   and many others with her of like rank and quality, which when 
+        <lb/>   they had delivered it, and after some time spent in reading of it, <name type="government_assoc">the Ho-
+       nourable Assembly</name> sent them an Answer by <name type="person" subtype="male"><abbrev/>Mr. PYM</name>, which was 
+        <lb/>  performed in this manner. </emph></head> 
+</p>
+
+<p>
+    
+    <lb/>   <label><emph><name type="government_assoc" subtype="male"><abbrev/>Mr. PYM </name>came to the Commonsdoore, and called for the Women,
+        <lb/>   and spake on to them in these words:</emph></label> Good Women, your Petition
+    <lb/>   and the Reasons have bin read in the House: and is very thank-
+    <lb/>    fully accepted of, and is come in a reasonable time: You shall 
+    <lb/>   (God willing) receive from us all the satisfaction which we can 
+    <lb/>    possibly give to your just and lawfull desires. We intreat you to 
+    <lb/>   repaire to your Houses, and turne your Petition which you have 
+    <lb/>   delivered here, into Prayers at home for us; for we have bin, are, 
+    <lb/>   and shall be (to our utmost power) ready to relieve you, your 
+    <lb/>   Husbands, and Children, and to perform the trust committed un-
+    <lb/>   to us, towards <emph>God</emph>, our <name type="government_assoc" subtype="male">King</name> and Countrey, as becometh faith-
+    <lb/>  full Christians and Loyal Subjects.
+  
+</p>
+
+
+<ab rend="align_center">
+    
+    <lb/>    FINIS.      
+</ab>
+
+
+
+
+      </body>
+      
+      
+   
+      
+  </text>  
+    
+    
+</SJlang>
