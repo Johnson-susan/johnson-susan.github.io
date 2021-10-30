@@ -3,7 +3,7 @@
 <?xml-model href="../johnson%20assignment%204_oct%2029/johnson_assignment4_schema.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 
 
-<SJlang xmlns="http:// johnson-susan.github.io /ns/1.0">
+<SJlang  xmlns="http://johnson-susan.github.io/ns/1.0">
     
     <SJlang_header>
         

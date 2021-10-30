@@ -1,0 +1,837 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<grammar  
+    ns="http://johnson-susan.github.io/ns/1.0"
+    xmlns="http://relaxng.org/ns/structure/1.0"
+    xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
+    datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
+    
+    <!-- The <start> element contains just the root element -->
+    
+    
+    <start>
+        
+        <ref name="element.SJlang"/>
+        
+    </start>
+    <!-- The <define> elements establish the vocabulary of the language -->
+    
+    
+    
+    
+    
+    
+    <!-- outermost elements: largest strucgures, wrappers -->
+    
+    
+    
+<define name="element.SJlang">
+        <element name="SJlang">
+           
+                <ref name="element.SJlang_header"/>
+                <ref name="element.text"/>  
+            
+            <text/>
+        </element>
+</define>
+   
+    
+    
+    
+<define name="element.SJlang_header">   
+        <element name="SJlang_header">                       
+            <ref name="element.fileDesc"/>
+            <ref name="element.profileDesc"/>
+          <text/>  
+        </element>
+</define>
+    
+  
+  
+
+<define name="element.text">
+ <element name="text">
+        
+     <ref name="element.front"/>
+     <ref name="element.body"/>
+     <optional><ref name="element.back"/></optional>
+     <attribute name="genre">
+       <choice>
+            <value>drama</value>
+         <value>letter</value>
+         <value>petition</value>
+         <value>poetry</value>
+         <value>prose</value>
+        </choice>
+     </attribute>
+     <text/>
+     </element>
+</define>
+
+
+
+
+
+
+<!-- large chunks: basic sections structure -->
+
+
+
+ <define name="element.front">
+        <element name="front">
+            
+        <ref name="model.phrase_level"/>        
+            <attribute name="section">                             
+                   <choice><value>toC</value>
+                    <value>preface</value>
+                    <value>titlepage</value> </choice>              
+            </attribute>
+            <text/>
+            </element>
+ </define>
+    
+    
+    
+ <define name="element.back">
+        <element name="back">
+            <ref name="model.phrase_level"/>  
+     <text/>
+        </element>
+</define>
+    
+    
+
+<define name="element.body">
+        <element name="body"> 
+            <choice><ref name="element.opener"/>
+            <ref name="element.closer"/></choice>
+            <ref name="model.phrase_level"/>  
+            <text/>  
+        </element>
+</define>
+
+
+
+    
+ <define name="element.div">
+       <element name="div">
+           <ref name="model.metawork"/>
+           
+        <attribute name="type">
+<choice>
+    <value>title_page</value> 
+    <value>introduction</value>
+    <value>argument</value> 
+    <value>list</value>
+    <value>conclusion</value>
+    <value>supplement</value>   
+            </choice>  
+        </attribute>  
+           <text/>
+      </element>
+</define> 
+    
+    
+   
+    
+    
+    
+   <!-- intermediate chunks, compound, holds multiple elements -->
+    
+    
+    
+<define name="element.opener">
+        <element name="opener"> 
+         
+            <optional> <ref name="element.dateline"/>
+            <ref name="element.salute"/>
+            <ref name="element.titleIntro"/></optional>
+            <ref name="model.phrase_level"/>
+        </element>
+</define>
+    
+    
+    
+<define name="element.closer">
+        <element name="closer" >
+         <optional><ref name="element.signature"/> </optional>       
+        </element>
+</define>
+    
+    
+    
+    
+ <define name="element.fileDesc">
+        <element name="fileDesc">           
+            <ref name="element.titleStmt"/>
+            <ref name="element.pubStmt"/>
+            <ref name="element.sourceDesc"/> 
+            <text/>
+        </element>
+</define>   
+    
+    
+    
+    
+<define name="element.profileDesc">
+        <element name="profileDesc">
+           
+            <ref name="element.change"/>
+            <ref name="element.doclang"/>
+            <optional><ref name="element.hand"/>
+            <ref name="element.note"/>
+            <ref name="element.notesstmt"/></optional>
+                      
+            </element>
+ </define>
+   
+   
+   
+<define name="element.titleStmt">
+        <element name="titleStat">
+            <ref name="element.title"/>
+            <ref name="element.author"/> 
+            <ref name="element.editor"/> 
+            <text/>
+        </element>
+ </define>  
+   
+   
+   
+   <!-- small chunks  -->
+    
+    
+    
+<define name="element.p">
+        <element name="p">
+            <ref name="model.phrase_inside_small"/>
+            
+                <choice><ref name="element.signature"/>
+                <ref name="model.correct_alts"/>
+                <ref name="element.salute"/></choice>
+            
+            <optional><attribute name="rend">
+                <choice><value>align_center</value>
+                    <value>align_right</value>
+                    <value>align_left</value></choice>
+            </attribute></optional> 
+            <text/>                    
+        </element>
+ </define> 
+    
+    
+       
+<define name="element.ab">
+       <element name="ab">
+           <ref name="model.phrase_inside_small"/>
+           
+               <choice><ref name="element.signature"/>
+               <ref name="model.correct_alts"/>
+               <ref name="element.salute"/>    </choice>          
+           
+           <optional><attribute name="rend">
+               <choice><value>align_center</value>
+               <value>align_right</value>
+               <value>align_left</value></choice>
+           </attribute></optional>
+           <text/>
+       </element>
+</define> 
+    
+    
+ 
+ 
+ <define name="element.head">
+        <element name="head">
+            <optional> <ref name="model.mixed_content"/>              
+           </optional>
+            <text/>
+        </element>
+</define>
+    
+ 
+ 
+ 
+<define name="element.list">
+       <element name="list">
+          <oneOrMore> <ref name="element.item"/></oneOrMore>
+           <optional>
+           <ref name="element.label"/>
+           </optional>
+           <text/>
+       </element>
+</define> 
+    
+    
+    
+<define name="element.lg">
+        <element name="lg">
+            <ref name="element.l"/>
+            <text/>
+        </element>
+ </define>
+    
+
+
+ <define name="element.quote">
+     <element name="quote">
+         <optional><ref name="model.phrase_inside_small"/></optional>
+         <text/>
+     </element>
+ </define>   
+    
+ 
+ 
+<define name="element.said">
+    <element name="said">
+        <optional><ref name="model.phrase_inside_small"/></optional>
+        <text/>
+    </element>
+</define>    
+    
+
+
+<define name="element.bibli">
+    <element name="bibli">
+        <text/>
+    </element>
+</define>    
+    
+    
+   
+   
+<define name="element.salute">
+       <element name="salute">
+          <choice> 
+              <ref name="model.phrase_level"/>
+           <ref name="model.phrase_inside_small"/>
+          </choice>
+           <text/>
+       </element>
+ </define>
+    
+    
+    
+ <define name="element.signature">
+       <element name="signature">
+           <choice> 
+               <ref name="model.phrase_level"/>
+               <ref name="model.phrase_inside_small"/>
+           </choice>
+           <text/>
+       </element>
+</define> 
+    
+ 
+ 
+ 
+<define name="element.pubStmt">
+        <element name="pubStmt">
+ <text/>           
+        </element>
+</define>
+ 
+  
+
+
+<define name="element.sourceDesc">
+        <element name="sourceDesc">
+            <text/>
+        </element>
+</define>
+
+
+
+
+<define name="element.change">
+        <element name="change">
+            <attribute name="when"/>
+            <attribute name="who"/>
+        </element>   
+</define>
+    
+    
+
+<define name="element.doclang">
+        <element name="doclang">
+            <attribute name="xml:lang">
+                <choice>   
+                    <value>en</value>
+                    <value>fz</value>
+                    <value>de</value>
+                    <value>la</value>
+                    <value>gk</value>
+                </choice>
+            </attribute>
+            <text/>  
+        </element>       
+</define>
+
+
+
+<define name="element.titleIntro">
+        <element name="titleIntro">
+       <text/>          
+        </element>
+</define>   
+    
+    
+    
+ 
+ <define name="element.note">
+      <element name="note">
+          <attribute name="anchor">
+              <value>xml:id=</value>
+          </attribute>
+      </element>
+</define>  
+    
+ 
+ 
+    
+<define name="element.notesstmt">
+        <element name="notesstmt">
+            <text/>
+        </element>
+</define>
+    
+    
+
+
+    
+    <!-- empty elements -->
+    
+
+
+ <define name="element.lb">
+     <element name="lb">
+         <empty/>
+     </element>
+ </define>   
+    
+
+
+<define name="element.pb">
+    <element name="pb">
+        <empty/>
+    </element>
+</define>
+
+
+
+<define name="element.np">
+    <element name="np">
+        <empty/>
+    </element>
+</define>
+
+
+
+<define name="element.milestone">
+    <element name="milestone">
+        <attribute name="unit">
+            <value>sig</value> </attribute>  
+            <attribute name="xml:id"/>   
+       <empty/>
+    </element>
+</define>
+    
+    
+ <define name="element.abbrev">
+        <element name="abbrev">
+            <empty/>
+        </element>
+</define> 
+   
+   
+   
+<define name="element.date">
+        <element name="date">
+            <attribute name="when"></attribute>
+        </element>
+        <empty/>
+</define>
+    
+    
+    
+    <!-- materiality, manuscript-level -->
+    
+ 
+ 
+<define name="element.add">
+        <element name="add">
+            <attribute name="hand">
+                <value>xml:id=</value>
+            </attribute>      
+        </element>
+</define>   
+ 
+ 
+ 
+ 
+<define name="element.del">
+    <element name="del">
+     <attribute name="hand">
+         <value>xml:id=</value>
+     </attribute> 
+    </element>
+</define> 
+ 
+
+
+<define name="element.dam">
+    <element name="dam">
+        <attribute name="type">
+            <choice><value>tear</value>
+            <value>smudge</value></choice>
+        </attribute>
+        <attribute name="extent">
+            <choice><value>minimal</value>
+            <value>severe</value></choice>
+        </attribute>        
+    </element>
+</define>
+
+
+    
+<define name="element.hand">
+        <element name="hand">
+         <text/>   
+        </element>
+</define>
+    
+    
+<define name="element.gap">
+    <element name="gap">
+        <attribute name="reason">
+            <choice><value>damage</value>
+            <value>deletion</value>
+            <value>undetermined</value></choice>
+        </attribute>
+    </element>
+</define>    
+ 
+ 
+ 
+ <define name="element.supplied">
+     <element name="supplied">
+        <text/> 
+     </element>
+ </define>
+ 
+ 
+ <define name="element.unclear">
+     <element name="unclear">
+         <optional><ref name="model.correct_alts"/></optional>
+     <text/>    
+     </element>
+ </define>
+ 
+ 
+ 
+<define name="element.descr">
+        <element name="descr">
+            <text/>
+        </element>
+</define>
+ 
+ 
+ 
+ <define name="element.rend">
+        <element name="rend">
+            <attribute name="type">
+                <choice><value>subscrpt</value>
+                <value>supscrpt</value></choice>
+            </attribute>
+        </element>
+</define>
+ 
+ 
+ 
+ 
+<define name="element.mw">
+        <element name="mw">
+            <attribute name="type">
+                <choice><value>catch</value>
+                    <value>pageNum</value>
+                    <value>borderSurround</value>
+                    <value>figure</value>
+                    <value>broken_line</value>
+                    <value>paper_damage</value>
+                    <value>stamp_imprint</value>
+                    <value>handwriting</value>
+                </choice>
+            </attribute>
+            <optional> <attribute name="subtype">
+                <choice> <value>align_center</value>
+                    <value>align_right</value>
+                    <value>align_left</value></choice>
+            </attribute></optional>
+            <text/>
+        </element>
+</define>
+    
+    
+ 
+ 
+ <!-- alternative encoding -->
+ 
+
+
+ <define name="element.choice">
+        <element name="choice">
+           <optional> <ref name="model.correct_alts"/></optional>
+            <text/>
+        </element>
+</define> 
+    
+ 
+ 
+<define name="element.sic">
+        <element name="sic">
+            <text/>  
+        </element>
+</define>
+    
+    
+    
+<define name="element.corr">
+        <element name="corr">
+            <optional><ref name="model.correct_alts"/></optional>
+            <text/>
+        </element>      
+    </define> 
+    
+    
+    
+    
+ <define name="element.orig">
+        <element name="orig">
+            <text/>
+        </element>
+</define>    
+ 
+ 
+ 
+ 
+<define name="element.reg">
+        <element name="reg">
+            <text/>
+        </element>
+</define>    
+ 
+ 
+ 
+ 
+ 
+    <!-- phrase-level encoding -->
+    
+    
+ 
+ 
+<define name="element.author">
+        <element name="author">
+            <text/>
+        </element>
+    </define>
+    
+
+
+<define name="element.editor">
+        <element name="editor">
+            <text/>
+        </element>
+    </define>
+    
+    
+    
+ <define name="element.title">
+        <element name="title">
+            <text/>
+        </element>
+ </define>
+ 
+ 
+ 
+ 
+   
+<define name="element.dateline">
+       <element name="dateline">
+           <text/>
+       </element>
+ </define>
+   
+   
+   
+  
+<define name="element.name">
+    <element name="name">
+      <optional><ref name="element.abbrev"/></optional>
+        <attribute name="type">          
+            <choice><value>person</value>
+            <value>place</value>
+            <value>org</value>
+            <value>adjective</value>
+            <value>religious_assoc</value>
+            <value>government_assoc</value></choice>  
+        </attribute>     
+      <optional><attribute name="subtype">
+         <choice>  <value>female</value>
+            <value>male</value>
+            <value>undetermined</value></choice>
+            
+        </attribute> </optional>       
+        <text/>
+    </element>
+</define>    
+    
+    
+    
+ <define name="element.emph">
+     <element name="emph">
+       <choice>  <ref name="element.rend"/>
+           <ref name="element.date"/>
+         <ref name="model.phrase_inside_small"/></choice>
+         <text/>
+     </element>
+ </define>
+ 
+ 
+ 
+ 
+<define name="element.hi">
+        <element name="hi">
+            <choice>  <ref name="element.rend"/>
+                <ref name="element.date"/>
+                <ref name="model.phrase_inside_small"/></choice>
+            <text/>
+        </element>
+</define>
+ 
+ 
+ 
+ <define name="element.seg">
+     <element name="seg">
+         <text/>
+     </element>
+ </define>
+ 
+ 
+ 
+ <define name="element.l">
+     <element name="l">
+         <text/>
+     </element>
+ </define>
+ 
+ 
+ 
+ <define name="element.item">
+     <element name="item">
+         <choice><ref name="element.label"/>
+         <ref name="model.phrase_inside_small"/></choice>
+         <text/>
+     </element>
+ </define>
+ 
+ 
+ <define name="element.label">
+     <element name="label">
+         <optional> <ref name="model.mixed_content"/></optional>
+         <text/>
+     </element>
+ </define>
+ 
+ 
+ 
+ 
+ <!-- model, compound element -->
+ 
+ 
+ 
+<define name="model.mixed_content">
+        <zeroOrMore>
+            <choice>
+                <ref name="element.hi"/>
+                <ref name="element.emph"/>
+                <text/>
+            </choice>
+        </zeroOrMore>
+</define>
+    
+    
+ 
+ <define name="model.phrase_level">
+     <zeroOrMore><choice>
+         <ref name="element.ab"/>
+     <ref name="element.p"/>
+     <ref name="element.div"/>
+     <ref name="element.dateline"/>
+     <ref name="element.name"/>
+     <ref name="element.date"/>
+     <ref name="element.pb"/>
+         <ref name="element.said"/>
+         <ref name="element.abbrev"/>
+         <ref name="model.correct_alts"/>
+         <text/>
+  </choice></zeroOrMore>
+ </define>
+ 
+ 
+ 
+ 
+ <define name="model.phrase_inside_small">
+     <zeroOrMore><choice>   
+     <ref name="element.date"/>
+     <ref name="element.dateline"/>
+     <ref name="element.name"/>
+     <ref name="element.lb"/>
+         <ref name="element.list"/>
+         <ref name="element.l"/>
+         <ref name="element.item"/>
+         <ref name="element.head"/>
+         <ref name="element.emph"/>
+         <ref name="element.hi"/>
+         <ref name="element.rend"/>
+         <ref name="element.label"/>
+         <ref name="element.rend"/>
+         <ref name="element.said"/>
+         <ref name="element.abbrev"/>
+         <ref name="model.correct_alts"/>
+         <text/>
+     </choice></zeroOrMore>
+ </define>
+    
+    
+    
+ <define name="model.metawork">
+    <zeroOrMore><choice>
+        <ref name="element.pb"/>
+     <ref name="element.mw"/>
+     <ref name="element.np"/>
+        <ref name="element.milestone"/>
+        <text/>
+    </choice></zeroOrMore>    
+ </define>   
+    
+    
+ <define name="model.correct_alts">
+     
+     <zeroOrMore><choice>
+         <ref name="element.corr"/>
+     <ref name="element.choice"/>
+     <ref name="element.orig"/>
+     <ref name="element.reg"/>
+     <ref name="element.sic"/>
+     <ref name="element.unclear"/>
+     <ref name="element.sic"/>
+     <ref name="element.supplied"/>
+     <ref name="element.dam"/>
+     <ref name="element.gap"/></choice></zeroOrMore>
+     <text/>
+ </define>   
+    
+    
+    
+</grammar>
