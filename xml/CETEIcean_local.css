@@ -64,7 +64,7 @@ mine-p {
 
 
 
-mine-div {
+mine-body {
     display:block;
     display:inline;
     background-color: white;
@@ -85,7 +85,22 @@ mine-front {
     display:block;
     display:inline;
     background-color: white;
-    color: red; 
+    color: blue; 
+    margin:1em;
+    font-size:125%;
+    font-style:italic;
+    text-decoration:line-through;
+    text-decoration:overline;
+    text-decoration:underline;
+}
+
+
+
+mine-head {
+    display:block;
+    display:inline;
+    background-color: white;
+    color: green; 
     margin:1em;
     font-size:125%;
     font-style:italic;
