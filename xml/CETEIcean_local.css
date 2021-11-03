@@ -25,15 +25,15 @@ mine-element {
 
 /*   
   To put content before or after an element:
-  mine-body:before {
+  mine-element:before {
    content: "[content]"; 
     }
-  mine-body:after {
+  mine-element:after {
    content: "[content]"; 
     }
  */
 
-mine-element {
+mine-p {
     display:block;
     display:inline;
     background-color: white;
