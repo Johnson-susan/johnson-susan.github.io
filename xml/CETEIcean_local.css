@@ -37,8 +37,8 @@ mine-element {
 mine-p {
     display:block;
     display:inline;
-    background-color: blue;
-    color: black; 
+    background-color: white;
+    color: blue; 
     margin:1em;
     font-size:125%;
     font-style:italic;
@@ -63,11 +63,12 @@ mine-ab {
 }
 
 
-mine-body {
+
+mine-head {
     display:block;
     display:inline;
     background-color: white;
-    color: red; 
+    color: brown; 
     margin:1em;
     font-size:125%;
     font-style:italic;
