@@ -61,3 +61,17 @@ mine-ab {
     text-decoration:overline;
     text-decoration:underline;
 }
+
+
+mine-body {
+    display:block;
+    display:inline;
+    background-color: white;
+    color: red; 
+    margin:1em;
+    font-size:125%;
+    font-style:italic;
+    text-decoration:line-through;
+    text-decoration:overline;
+    text-decoration:underline;
+}
